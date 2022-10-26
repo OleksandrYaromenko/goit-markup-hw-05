@@ -316,6 +316,7 @@ height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 16px;
   padding-bottom: 30px;
   
 }
@@ -326,7 +327,7 @@ height: auto;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  fill: var(--team-icon-color)
+  fill: var(--team-icon-color);
 }
 .main-team-container:hover{
 fill: var(--white-color);
@@ -579,6 +580,7 @@ border-radius: 4px;
   align-items: center;
   justify-content: center;
   background-color: var(--white-color);
+  transition: background-color, fill 250ms var(--time-hover);
 }
 .window-bottom:hover{
 background-color: var(--blue-color);
