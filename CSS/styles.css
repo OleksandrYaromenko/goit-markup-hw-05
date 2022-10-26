@@ -326,10 +326,11 @@ height: auto;
   height: 44px;
   border-radius: 50%;
   fill: var(--team-icon-color);
+  transition: background-color,fill 250ms var(--time-hover);
 }
 .main-team-container:hover{
-fill: var(--white-color);
-background-color: var(--blue-color); 
+background-color: var(--blue-color);
+fill: var(--white-color); 
 }
 .logo-icon{
   display: flex;
