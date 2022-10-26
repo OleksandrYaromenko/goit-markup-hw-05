@@ -316,9 +316,7 @@ height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 16px;
-  padding-bottom: 30px;
-  
+  margin-bottom: 30px;
 }
 .main-team-container{
   display: flex;
