@@ -483,15 +483,19 @@ border-radius: 4px;
   gap: 30px;
   transition: opacity 250ms var(--time-hover);
 }
- .portfolio-list-box{
+ 
+ .portfolio-hower-box{
   position: relative;
+  overflow: hidden;
  }
+ 
    .portfolio-list-box:hover{
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
    1px 4px 6px rgba(0, 0, 0, 0.16); 
  }
  .portfolio-list-box:hover .portfolio-hover-text{
   opacity: 1; 
+   transform: translateY(0%);
  }
 
 .main-portfolio-titel {
@@ -522,9 +526,11 @@ border-radius: 4px;
   position: absolute;
   opacity: 0;
   content: '';
+  transform: translateY(100%);
   background-color: rgba(33, 150, 243, 0.9);
   color: var(--white-color);
    transition: opacity 250ms var(--time-hover);
+   transition: transform 250ms var(--time-hover);
 }
 .portfolio-hower-paragraph{
   font-size: 18px;
@@ -534,10 +540,13 @@ border-radius: 4px;
   
 } 
 
+
+/* Window */
+
 .backdrop{
-  position: absolute;
+  position: fixed;
   background-color: rgba(0, 0, 0, 0.2);
-  transition: opacity 250ms var(--time-hover);
+  transition: opacity 250ms var(--time-hover),visibility  250ms var(--time-hover);
   top: 0;
   left: 0;
   width: 100%;
@@ -546,17 +555,20 @@ border-radius: 4px;
 
  
 .backdrop.is-hidden {
-  position: fixed; 
+  visibility: hidden; 
   opacity: 0;
   pointer-events: none;
-  transition: opacity 250ms var(--time-hover);
+  
+} 
+ .backdrop .is-hidden .window{
+  transform: translate(-50%, -50%) scale(1.2);
 } 
 
 .window{
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
   min-width: 528px;
   min-height: 581px;
   padding: 15px;
